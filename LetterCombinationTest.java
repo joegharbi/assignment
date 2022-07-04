@@ -9,10 +9,17 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class LetterCombinationTest {
+    
     @Test
     public void testLetterCombinationsValid() throws Exception {
         List<String> result = LetterCombination.letterCombinations("23");
         Assert.assertEquals(result.toString(),"[ad, ae, af, bd, be, bf, cd, ce, cf]");
+    }
+    
+    @Test
+    public void testLetterCombinationsValidEmpty() throws Exception {
+        List<String> result = LetterCombination.letterCombinations("");
+        Assert.assertEquals(result.toString(),"[]");
     }
 
     @Test
